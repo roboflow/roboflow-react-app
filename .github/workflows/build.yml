@@ -1,0 +1,19 @@
+name: Build Image
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read #Needed to build image
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+
+    - name: Build Image
+      run: |
+            docker build . --file Dockerfile --tag roboflow-react-app:latest
