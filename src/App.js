@@ -1,5 +1,5 @@
 import "./App.css";
-import Roboflow from "./components/roboflow.js";
+import Roboflow from "./components/Roboflow.jsx";
 
 export default function App() {
   return (
@@ -9,6 +9,5 @@ export default function App() {
         <Roboflow modelName="mask-wearing" modelVersion="14" />
       </div>
     </main>
-  )
+  );
 }
-

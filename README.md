@@ -1,3 +1,21 @@
+# Roboflow React App
+
+This is a customizable React app that uses the [Roboflow API](https://docs.roboflow.com/) to run inference with a Roboflow model. Edit the variables at the top of `src/components/Roboflow.jsx`` to infer on your model.
+
+## Local Development
+
+The app can be run locally with `npm start`, or inside a Docker container.
+
+### Docker
+
+#### `npm run docker:build`
+
+Builds your docker image -- do this whenever dependencies are updated.
+
+#### `npm run docker:start`
+
+Starts your docker container, watching your local app volume, and exposing port 3000.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

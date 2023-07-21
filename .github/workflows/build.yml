@@ -18,4 +18,4 @@ jobs:
 
     - name: Build Image
       run: |
-            docker build . --file Dockerfile --tag ghcr.io/roboflow/roboflow-react-app:latest
+            docker build . --file Dockerfile --tag roboflow-react-app:latest
