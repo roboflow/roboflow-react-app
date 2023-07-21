@@ -1,0 +1,21 @@
+name: Build Image
+
+on:
+  pull_request:
+    branches: ["main"]
+  push:
+    branches: ["main"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read #Needed to build image
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+
+    - name: Build Image
+      run: |
+            docker build . --file Dockerfile --tag ghcr.io/roboflow/roboflow-react-app:latest
