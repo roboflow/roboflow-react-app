@@ -11,6 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read #Needed to build image
+      packages: write #Needed to publish package/image
 
     steps:
     - name: Checkout Repository
