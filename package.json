@@ -17,7 +17,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "docker:build": "docker build -t roboflow-react-app .",
+    "docker:start": "docker run -it --rm -v ${PWD}:/app -v /app/node_modules -p 3000:3000 -e WATCHPACK_POLLING=true roboflow-react-app:latest"
   },
   "eslintConfig": {
     "extends": [
